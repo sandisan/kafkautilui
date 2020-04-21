@@ -15,4 +15,12 @@
     width: 1000px;
  }
 
- .btn{min-width:400px;}
+ .btn-primary{
+  background-color: #003366; 
+  min-width:400px;
+  }
+
+  .btn-success{
+    min-width:400px;
+  }
+

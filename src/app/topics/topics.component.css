@@ -11,4 +11,7 @@
     filter: dropshadow(color=#000000, offx=2, offy=2);
   }
 
-  .btn{min-width:400px;}
+  .btn{
+    background-color: #003366;
+    min-width:400px;
+  }

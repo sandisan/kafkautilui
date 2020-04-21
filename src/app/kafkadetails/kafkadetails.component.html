@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary static-top" style="height: 52px">
     <a class="navbar-brand" href="#"><img src="assets/img/2.png" style="height: 50px;"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -7,12 +7,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="navbar-link" style="color:grey;font-size:90%;" (click)="NavigateToKafkaHomePage()" >About Kafka </a>
+          <a class="navbar-link" style="color:white;font-size:90%;" (click)="NavigateToKafkaHomePage()" >About Kafka </a>
           
         </li>
         
         <li class="nav-item">
-          <a class="navbar-link" style="color:grey;font-size:90%;" (click)="NavigateToConnection()">Connect</a>
+          <a class="navbar-link" style="color:white;font-size:90%;" (click)="NavigateToConnection()">Connect</a>
         </li>
       </ul>
     </div>
@@ -26,22 +26,22 @@
   </div>
 <div class="container" >
     <div class="mx-auto text-center">
-        <h1 class="mx-auto my-0 text-uppercase" style="color:black;">Kafka</h1>
-        <p class="w3-justify">
-            <p class="w3-justify">&#9642; Building operational simplicity into distributed systems, especially for nuanced behaviors, is
-              somewhat of an art and often best achieved after gathering production experience. Apache Kafka's popularity can be attributed in large part to its design and operational simplicity. As we add more knobs and features,
-              we try to go back and rethink ways of simplifying complex behaviors.</p>
+        <img src="assets/img/kafka.png" style="height: 100px;">
+        <br/>
+            <p class="w3-justify">&#9642; In large scale Kafka cluster migration from Kafka cluster or to 
+              IBM event stream one of the key task is to migrate all the topics with all relevant 
+              configurations. There no out-of-box tools available for performing seamless migration 
+              specifically to Event Stream.</p>
               <br/>
-            <p class="w3-justify">&#9642; One of the more nuanced features in Apache Kafka is its replication protocol. Tuning Kafka replication to work automatically, for varying size workloads
-                on a single cluster, is somewhat tricky today. One of the challenges that make this particularly difficult is knowing how to prevent replicas
-                from jumping in and out of the in sync replica list (aka ISR). What this means from a user’s perspective is that if a producer sends a batch
-                of messages “large enough”, then this can cause several alerts to go off on the Kafka brokers. These alerts indicate that some topics
-                are “under replicated” which means that data is not being replicated to enough number of brokers thereby increasing the probability of data
-                loss should those replicas fail or die. So it is important that the “under replicated” partition count be monitored closely in a Kafka cluster.</p>
-                <br/>
-            <p class="w3-justify">&#9642; However, this alert should go off only when some broker fails, slows down or pauses and not when the producer writes data of varying sizes.
-                This unexpected behavior and the false alarms are the source of a lot of manual operational overhead and churn.
-                In this post, I discuss the root cause of this behavior and how we arrived at the fix.</p>
+            <p class="w3-justify">&#9642; Kafka Object Replicator helps in auto replication of Kafka 
+              Objects like Topic, Partitions and Replication Factor to IBM Event stream cluster. 
+              It provide a  Web Interface where user can choose source Kafka Objects and perform replication. 
+              This Helps in reducing manual effort and errors. Tool also provides functionality to Customize 
+              Object Configuration  while replication and generates reports detailing out objects that are 
+              migrated successfully or errored </p>
+            <img src="assets/img/kafkatoIBM.png" style="height: 200px;">
+            <br/>
+            <br/>
         <button type="button" class="btn btn-primary" (click)="NavigateToConnection()">Let's Start</button>
     </div>
   </div>

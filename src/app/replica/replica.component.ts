@@ -28,7 +28,7 @@ export class ReplicaComponent implements OnInit {
 
   ngOnInit() {
 
-    this.url = 'http://localhost:8081/api/topics/create?server='
+    this.url = 'http://kafka-object-replicator-service-cicd.169-61-227-230.nip.io/api/topics/create?server='
     this.contenttype = "application/json; charset=utf-8"
   }
 

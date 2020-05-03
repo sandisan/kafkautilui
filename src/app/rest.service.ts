@@ -44,9 +44,9 @@ export class RestService {
 
   setEndPoint(code:any){
     if(code=="1") {
-      this.endPoint='http://localhost:8081/api/testConnection?server='
+      this.endPoint='http://kafka-object-replicator-service-cicd.169-61-227-230.nip.io/api/testConnection?server='
     }else if(code=="2"){
-      this.endPoint='http://localhost:8081/api/es/testConnection?server='
+      this.endPoint='http://kafka-object-replicator-service-cicd.169-61-227-230.nip.io/api/es/testConnection?server='
     }
   }
 
@@ -74,7 +74,7 @@ export class RestService {
 
   getItems (queryparam): Observable<any> {
 
-    this.endPoint = 'http://localhost:8081/api/topics?server='
+    this.endPoint = 'http://kafka-object-replicator-service-cicd.169-61-227-230.nip.io/api/topics?server='
      
     return this.http.get(this.endPoint + queryparam).pipe(
       map(this.extractData),
